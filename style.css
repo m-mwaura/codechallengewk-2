@@ -1,0 +1,107 @@
+/* general body styling */
+body {
+  background-image: url(img/white-1209550.jpg);
+  background-size: cover;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Header Styling */
+#one {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #181719;
+}
+
+/* Form Styling */
+#fillout {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+}
+
+/* Shopping List Container */
+#container {
+  margin-top: 30px;
+  display: flex;
+  gap: 8px;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+/* Item card styling */
+.d-inline-flex p-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.item .title {
+  font-size: 18px;
+  margin: 0;
+  color: black;
+}
+
+.item .price {
+  font-weight: bold;
+  color: darkgray;
+}
+
+.tick input {
+  
+  margin-right: 10px;
+}
+
+/* Purchased Item Styling */
+.purchased .price {
+  text-decoration: line-through;
+  color: black;
+}
+
+.mb-3{
+background-color: #fefdfd;
+padding: 30px;
+border-radius: 5px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.clear-list {
+  display: block;
+  margin: 20px auto;
+  background-color: #868484;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.clear-list:hover {
+  background-color: #444343;
+}
+
+
+/* Input and Button Styling */
+.form-control {
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.btn-primary {
+  width: 100%;
+  border: none;
+}
