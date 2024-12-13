@@ -9,14 +9,30 @@ body {
 #one {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 20px 0;
   font-size: 24px;
-  color: #181719;
+  border-bottom: 8px solid #D3D3D3;  
+}
+#row {
+display: flex;
+justify-content: flex-start;
+
+}
+.sidea {
+float: left;
+width: 50%;
+
 }
 
+.sideb {
+float: right;
+width: 50%;
+}
 /* Form Styling */
 #fillout {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   margin-top: 30px;
 
 }
@@ -26,9 +42,8 @@ body {
   margin-top: 30px;
   display: flex;
   gap: 8px;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
 
 }
 
@@ -46,7 +61,10 @@ body {
   padding: 15px;
   border-radius: 8px;
 }
-
+.total {
+  text-align: center;
+  color: #868484;
+}
 .item .title {
   font-size: 18px;
   margin: 0;
@@ -55,7 +73,7 @@ body {
 
 .item .price {
   font-weight: bold;
-  color: darkgray;
+  color: #2f2f2f;
 }
 
 .tick input {
@@ -66,7 +84,7 @@ body {
 /* Purchased Item Styling */
 .purchased .price {
   text-decoration: line-through;
-  color: black;
+  color: green;
 }
 
 .mb-3{

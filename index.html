@@ -22,8 +22,8 @@
         <h2>My shopping List <img width="50" height="50"
                 src="https://img.icons8.com/stickers/50/add-shopping-cart--v2.png" alt="add-shopping-cart--v2" /></h2>
     </div>
-    <div class="row">
-        <div class="column">
+    <div id="row">
+        <div class="sidea">
     <div id="fillout">
         <div class="d-inline-flex p-2">
             <div class="mb-3">
@@ -32,17 +32,19 @@
                     <input type="text" class="form-control" name="price" placeholder="Price" required><br>
                     <input class="btn btn-primary" type="submit" value="Add">
                 </form>
+                <section class="btn-sections">
+                    <button class="clear-list hidden">Clear list</button>
+                </section>
+                <div class="total">Total: ksh0.00</div> <!-- Total price display -->
+
             </div>
         </div>
     </div>
 </div>
 
-    <div class="column">
+    <div class="sideb">
     <div id="container"></div>
 
-    <section class="btn-sections">
-        <button class="clear-list hidden">Clear list</button>
-    </section>
 </div>
 </div>
     <script src="/script.js"></script> 

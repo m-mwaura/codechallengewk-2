@@ -3,6 +3,7 @@ let shoppingList = []; // array to hold shopping items
 const form = document.getElementById('shopping-form'); //DOM elements
 const container = document.getElementById('container');
 const clearButton = document.querySelector('.clear-list');
+const totalDisplay = document.getElementsByClassName('total'); // element to display the total price
 
 
 function displayItems(){      // function to display all items
@@ -11,6 +12,8 @@ function displayItems(){      // function to display all items
         const itemCard= createItemCard(item,index);
         container.insertAdjacentHTML('beforeend', itemCard)
     });
+
+    updateTotal();
 
 }    
 
@@ -44,6 +47,11 @@ function displayItems(){      // function to display all items
             clearButton.classList.add('hidden'); 
         }
 
+    }
+
+    function updateTotal() {
+        const total = shoppingList.reduce((sum, item) => sum + parseFloat(item.price), 0);
+        totalDisplay[0].textContent = `Total: ksh${total.toFixed(2)}`; // display total, with 2 decimal places
     }
 
     clearButton.addEventListener('click', () => { //event listener to clear shopping list
