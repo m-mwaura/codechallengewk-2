@@ -3,7 +3,7 @@ let shoppingList = []; // array to hold shopping items
 const form = document.getElementById('shopping-form'); //DOM elements
 const container = document.getElementById('container');
 const clearButton = document.querySelector('.clear-list');
-const totalDisplay = document.getElementsByClassName('total'); // element to display the total price
+const totalDisplay = document.getElementsByClassName('total'); //  added element to display the total price
 
 
 function displayItems(){      // function to display all items
@@ -14,7 +14,6 @@ function displayItems(){      // function to display all items
     });
 
     updateTotal();
-
 }    
 
     function createItemCard(item, index) { //function to create items on html
@@ -34,9 +33,12 @@ function displayItems(){      // function to display all items
     }
     
     function togglePurchased(index) {
-        const details = document.getElementById(`details-${index}`);
         const checkbox = document.getElementById(`mark-${index}`);
-        details.classList.toggle('purchased', checkbox.checked);
+        const item = shoppingList[index];
+        item.purchased = checkbox.checked; 
+
+        updateTotal();
+    
     }
 
     function toggleClearButtonVisibility(){
@@ -49,8 +51,11 @@ function displayItems(){      // function to display all items
 
     }
 
-    function updateTotal() {
-        const total = shoppingList.reduce((sum, item) => sum + parseFloat(item.price), 0);
+    function updateTotal() {         // Sum the price of items that are not marked as purchased
+        const total = shoppingList.reduce((sum, item) => {
+            return item.purchased ? sum : sum + parseFloat(item.price);
+        }, 0);
+    
         totalDisplay[0].textContent = `Total: ksh${total.toFixed(2)}`; // display total, with 2 decimal places
     }
 
