@@ -32,10 +32,17 @@ function displayItems(){      // function to display all items
 </div>`;
     }
     
-    function togglePurchased(index) {
+    function togglePurchased(index) { //function to mark item as purchased or not based on tick mark
         const checkbox = document.getElementById(`mark-${index}`);
         const item = shoppingList[index];
-        item.purchased = checkbox.checked; 
+        const itemElement = document.getElementById(`details-${index}`);
+        item.purchased = checkbox.checked;
+        if (item.purchased) {
+            itemElement.classList.add('purchased');
+
+        } else {
+            itemElement.classList.remove('purchased')
+        }
 
         updateTotal();
     
